@@ -60,8 +60,8 @@
         <h2>Login</h2>
         <input type="email" id="email" placeholder="Email"><br>
         <input type="password" id="password" placeholder="Password"><br>
-        <button id="loginBtn">Login</button><br>
-        <button id="regis">Register</button>
+        <button id="loginBtn">Login</button><br><br>
+        <button onclick="myFunction()" id="demo">Register</button>
     </div>
 
     <script type="module">
@@ -109,19 +109,9 @@
                 alert("Login failed: " + error.message);
             }
         });
-        document.getElementById("regis").addEventListener("click",
-
-        try {
-            if (5==5) {
-                if (3==3) {
-                    window.location.href = "register.html";
-
-                } else {
-                    window.location.href = "register.html";
-                }
-
-            }
-        });
+        function myFunction() {
+            document.getElementById("demo").window.location.href = "student.html";
+        }
     </script>
 </body>
 
