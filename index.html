@@ -109,13 +109,17 @@
                 alert("Login failed: " + error.message);
             }
         });
-        document.getElementById("regis").addEventListener("click",;
+        document.getElementById("regis").addEventListener("click",
 
         try {
+            if (userDoc.exists()) {
+                const role = userDoc.data().role;
+                if (role !== "facult") {
+                    window.location.href = "register.html";
 
-
-            if (role !== "facult") {
-                window.location.href = "register.html";
+                } else {
+                    window.location.href = "register.html";
+                }
 
             }
         });
