@@ -61,7 +61,7 @@
         <input type="email" id="email" placeholder="Email"><br>
         <input type="password" id="password" placeholder="Password"><br>
         <button id="loginBtn">Login</button><br><br>
-        <button id="demo" onclick="myFunction()">Register</button>
+        <button id="demo">Register</button>
     </div>
 
     <script type="module">
@@ -109,10 +109,21 @@
                 alert("Login failed: " + error.message);
             }
         });
-        function myFunction() {
-            document.getElementById("demo").window.location.href = "student.html";
-        }
+        document.getElementById("demo").addEventListener("click", () => {
+            window.location.href = "student.html";
+        });
+
     </script>
+    <script>
+        function myFunction() {
+            window.location.href = "student.html";
+        }
+        window.myFunction = function () {
+            window.location.href = "student.html";
+        };
+
+    </script>
+
 </body>
 
 </html>
